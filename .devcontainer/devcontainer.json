@@ -1,0 +1,30 @@
+{
+	"name": "touri-demo",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers-community/features/deno:1": {
+			"version": "2.0.3"
+		},
+        "ghcr.io/devcontainers/features/rust:1": {
+            "version": "1.82.0"
+        },
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"mounts": [
+		"source=${env:HOME}${env:USERPROFILE}/.config/gh,target=/home/vscode/.config/gh,type=bind"
+	],
+	"containerEnv": {
+		"NODE_ENV": "development",
+		"TZ": "UTC"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"denoland.vscode-deno",
+				"mhutchie.git-graph",
+				"waderyan.gitblame"
+			]
+		}
+	}
+}
