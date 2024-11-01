@@ -1,3 +1,4 @@
+// @deno-types="npm:@types/react"
 import { useState } from "react";
 // @ts-ignore
 import reactLogo from "./assets/react.svg";

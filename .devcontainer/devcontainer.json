@@ -5,25 +5,33 @@
 		"ghcr.io/devcontainers-community/features/deno:1": {
 			"version": "2.0.3"
 		},
-        "ghcr.io/devcontainers/features/rust:1": {
-            "version": "1.82.0"
-        },
+		"ghcr.io/devcontainers/features/rust:1": {
+			"version": "1.82.0"
+		},
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {}
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers-contrib/features/apt-get-packages:1": {
+			"packages": "pkg-config, libssl-dev, libglib2.0-dev, libwebkit2gtk-4.1-dev"
+		}
 	},
 	"mounts": [
 		"source=${env:HOME}${env:USERPROFILE}/.config/gh,target=/home/vscode/.config/gh,type=bind"
 	],
 	"containerEnv": {
 		"NODE_ENV": "development",
-		"TZ": "UTC"
+		"TZ": "UTC",
+		"OPENSSL_DIR": "/usr",
+		"OPENSSL_INCLUDE_DIR": "/usr/include/openssl",
+		"OPENSSL_LIB_DIR": "/usr/lib/x86_64-linux-gnu",
+		"PKG_CONFIG_PATH": "/usr/lib/x86_64-linux-gnu/pkgconfig"
 	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"denoland.vscode-deno",
 				"mhutchie.git-graph",
-				"waderyan.gitblame"
+				"waderyan.gitblame",
+				"tauri-apps.tauri-vscode"
 			]
 		}
 	}

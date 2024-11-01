@@ -1,4 +1,5 @@
 import React from "react";
+// @deno-types="npm:@types/react-dom/client"
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 
