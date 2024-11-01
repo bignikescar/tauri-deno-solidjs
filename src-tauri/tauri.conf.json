@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "test",
+  "productName": "tuari-deno",
   "version": "0.1.0",
-  "identifier": "com.test.app",
+  "identifier": "com.tuari-deno.app",
   "build": {
     "beforeDevCommand": "deno task dev",
     "devUrl": "http://localhost:1420",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "test",
+        "title": "tuari-deno",
         "width": 800,
         "height": 600
       }
