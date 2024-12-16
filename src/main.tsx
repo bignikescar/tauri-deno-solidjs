@@ -1,10 +1,6 @@
-import React from "react";
-// @deno-types="npm:@types/react-dom/client"
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+/* @refresh reload */
+import './index.css'
+import { render } from 'solid-js/web'
+import App from './App.tsx'
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+render(() => <App />, document.getElementById('root') as HTMLElement)

@@ -1,53 +1,36 @@
-// @deno-types="npm:@types/react"
-import { useState } from "react";
-// @ts-ignore
-import reactLogo from "./assets/react.svg";
-import { invoke } from "@tauri-apps/api/core";
-import "./App.css";
+import './App.css'
+import { createSignal } from 'solid-js'
+// @ts-expect-error Unable to infer type at the moment
+import solidLogo from './assets/solid.svg'
 
 function App() {
-  const [greetMsg, setGreetMsg] = useState("");
-  const [name, setName] = useState("");
-
-  async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setGreetMsg(await invoke("greet", { name }));
-  }
+  const [count, setCount] = createSignal(0)
 
   return (
-    <main className="container">
-      <h1>Hello World!</h1>
-
-      <div className="row">
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
+    <div class="App">
+      <img src="/vite-deno.svg" alt="Vite with Deno" />
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src="/vite.svg" class="logo" alt="Vite logo" />
         </a>
-        <a href="https://tauri.app" target="_blank">
-          <img src="/tauri.svg" className="logo tauri" alt="Tauri logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="https://www.solidjs.com" target="_blank">
+          <img src={solidLogo} class="logo solid" alt="Solid logo" />
         </a>
       </div>
-      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
-
-      <form
-        className="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          greet();
-        }}
-      >
-        <input
-          id="greet-input"
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Enter a name..."
-        />
-        <button type="submit">Greet</button>
-      </form>
-      <p>{greetMsg}</p>
-    </main>
-  );
+      <h1>Vite + Solid</h1>
+      <div class="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count()}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p class="read-the-docs">
+        Click on the Vite and Solid logos to learn more
+      </p>
+    </div>
+  )
 }
 
-export default App;
+export default App

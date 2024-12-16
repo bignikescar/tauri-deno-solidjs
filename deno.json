@@ -1,28 +1,28 @@
 {
-    "nodeModulesDir": "auto",
-    "tasks": {
-        "dev": "deno run -A npm:vite",
-        "build": "deno check src/main.ts && deno run -A npm:vite build",
-        "preview": "deno run -A npm:vite preview",
-        "tauri": "deno run -A npm:@tauri-apps/cli"
-    },
-    "compilerOptions": {
-        "jsx": "react-jsx",
-        "jsxImportSource": "react",
-        "lib": [
-            "ES2020",
-            "DOM",
-            "DOM.Iterable"
-        ]
-    },
-    "imports": {
-        "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
-        "vite": "npm:vite@^5.3",
-        "@vitejs/plugin-react": "npm:@vitejs/plugin-react",
-        "@tauri-apps/api": "npm:@tauri-apps/api@^2",
-        "@tauri-apps/plugin-shell": "npm:@tauri-apps/plugin-shell@^2",
-        "@tauri-apps/cli": "npm:@tauri-apps/cli@^2",
-        "react": "npm:react",
-        "react-dom": "npm:react-dom"
-    }
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "dev": "deno run -A --node-modules-dir npm:vite",
+    "build": "deno check src/main.ts && deno run -A --node-modules-dir npm:vite build",
+    "preview": "deno run -A --node-modules-dir npm:vite preview",
+    "serve": "deno run --allow-net --allow-read --node-modules-dir jsr:@std/http@1/file-server dist/",
+    "tauri": "deno run -A --node-modules-dir npm:@tauri-apps/cli",
+    "bundle": "deno run -A --node-modules-dir bundle-solidjs.ts 'src/main.tsx' 'dist/out.js'"
+  },
+  "compilerOptions": {
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "solid-js"
+  },
+  "imports": {
+    "@tauri-apps/api": "npm:@tauri-apps/api@^2",
+    "@tauri-apps/plugin-shell": "npm:@tauri-apps/plugin-shell@^2",
+    "@tauri-apps/cli": "npm:@tauri-apps/cli@^2",
+    "vite": "npm:vite@^6.0.1",
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.2",
+    "vite-plugin-solid": "npm:vite-plugin-solid@^2.11.0",
+    "esbuild": "npm:esbuild@^0.24.0",
+    "esbuild-plugin-solid": "npm:esbuild-plugin-solid@^0.6.0",
+    "node-gyp": "npm:node-gyp@^11.0.0",
+    "solid-js": "npm:solid-js@^1.9.3"
+  }
 }

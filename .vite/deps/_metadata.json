@@ -1,55 +1,46 @@
 {
-  "hash": "3d2cde23",
-  "configHash": "282efc1d",
+  "hash": "ed9924e9",
+  "configHash": "3156c437",
   "lockfileHash": "e3b0c442",
-  "browserHash": "b93dc4f7",
+  "browserHash": "063b2a04",
   "optimized": {
-    "react": {
-      "src": "../../node_modules/.deno/react@18.3.1/node_modules/react/index.js",
-      "file": "react.js",
-      "fileHash": "36b0c927",
-      "needsInterop": true
-    },
-    "react-dom": {
-      "src": "../../node_modules/.deno/react-dom@18.3.1/node_modules/react-dom/index.js",
-      "file": "react-dom.js",
-      "fileHash": "dcc27c24",
-      "needsInterop": true
-    },
-    "react/jsx-dev-runtime": {
-      "src": "../../node_modules/.deno/react@18.3.1/node_modules/react/jsx-dev-runtime.js",
-      "file": "react_jsx-dev-runtime.js",
-      "fileHash": "1821dc61",
-      "needsInterop": true
-    },
-    "react/jsx-runtime": {
-      "src": "../../node_modules/.deno/react@18.3.1/node_modules/react/jsx-runtime.js",
-      "file": "react_jsx-runtime.js",
-      "fileHash": "b44d1f83",
-      "needsInterop": true
-    },
-    "@tauri-apps/api/core": {
-      "src": "../../node_modules/.deno/@tauri-apps+api@2.0.3/node_modules/@tauri-apps/api/core.js",
-      "file": "@tauri-apps_api_core.js",
-      "fileHash": "1d93dc9f",
+    "solid-js": {
+      "src": "../../node_modules/.deno/solid-js@1.9.3/node_modules/solid-js/dist/dev.js",
+      "file": "solid-js.js",
+      "fileHash": "8b80e5a7",
       "needsInterop": false
     },
-    "react-dom/client": {
-      "src": "../../node_modules/.deno/react-dom@18.3.1/node_modules/react-dom/client.js",
-      "file": "react-dom_client.js",
-      "fileHash": "a26a3030",
-      "needsInterop": true
+    "solid-js/web": {
+      "src": "../../node_modules/.deno/solid-js@1.9.3/node_modules/solid-js/web/dist/dev.js",
+      "file": "solid-js_web.js",
+      "fileHash": "65b5d5ce",
+      "needsInterop": false
+    },
+    "solid-js/store": {
+      "src": "../../node_modules/.deno/solid-js@1.9.3/node_modules/solid-js/store/dist/dev.js",
+      "file": "solid-js_store.js",
+      "fileHash": "160b8821",
+      "needsInterop": false
+    },
+    "solid-js/html": {
+      "src": "../../node_modules/.deno/solid-js@1.9.3/node_modules/solid-js/html/dist/html.js",
+      "file": "solid-js_html.js",
+      "fileHash": "235189af",
+      "needsInterop": false
+    },
+    "solid-js/h": {
+      "src": "../../node_modules/.deno/solid-js@1.9.3/node_modules/solid-js/h/dist/h.js",
+      "file": "solid-js_h.js",
+      "fileHash": "47ee51e6",
+      "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-FU2NPAZO": {
-      "file": "chunk-FU2NPAZO.js"
+    "chunk-RULD45CP": {
+      "file": "chunk-RULD45CP.js"
     },
-    "chunk-A2KMM325": {
-      "file": "chunk-A2KMM325.js"
-    },
-    "chunk-BUSYA2B4": {
-      "file": "chunk-BUSYA2B4.js"
+    "chunk-MCSBZCFX": {
+      "file": "chunk-MCSBZCFX.js"
     }
   }
 }
