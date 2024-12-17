@@ -3,7 +3,6 @@ import { internalIpV4 } from "internal-ip";
 
 import process from "node:process";
 // import deno from "@deno/vite-plugin";
-// import solid from "vite-plugin-solid";
 
 // @ts-expect-error process is a nodejs global
 const mobile = !!/android|ios/.exec(process.env.TAURI_ENV_PLATFORM);
@@ -12,13 +11,30 @@ const host = await internalIpV4();
 
 let hmrPort = 5183;
 
+// https://docs.solidjs.com/solid-start/reference/config/define-config
+
+// Parameters
+// Property	Type	Default	Description
+// ssr	boolean	true	Toggle between client and server rendering.
+// solid	object		Configuration object for vite-plugin-solid
+// extensions	string[]	["js", "jsx", "ts", "tsx"]	Array of file extensions to be treated as routes.
+// server	object		Nitro server config options
+// appRoot	string	"./src"	The path to the root of the application.
+// routeDir	string	"./routes"	The path to where the routes are located.
+// middleware	string		The path to an optional middleware file.
+// devOverlay	boolean	true	Toggle the dev overlay.
+// experimental.islands	boolean	false	Enable "islands" mode.
+// vite	ViteConfig or ({ router })=>ViteConfig		Vite config object. Can be configured for each router which has the string value "server", "client" or "server-function"`
+
 // https://vitejs.dev/config/
+// https://nitro.build/config
 export default defineConfig({
-  ssr: false,
-  server: { preset: "static" },
+  // ssr: true,
+  // server: { preset: "static" },
   vite: () => ({
     // prevent vite from obscuring rust errors
     clearScreen: false,
+    ssr: { external: ["@prisma/client"] },
     // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
     // 1. tauri expects a fixed port, fail if that port is not available
     server: {
@@ -43,21 +59,6 @@ export default defineConfig({
     envPrefix: ["VITE_", "TAURI_"],
   }),
 });
-
-// https://docs.solidjs.com/solid-start/reference/config/define-config
-
-// Parameters
-// Property	Type	Default	Description
-// ssr	boolean	true	Toggle between client and server rendering.
-// solid	object		Configuration object for vite-plugin-solid
-// extensions	string[]	["js", "jsx", "ts", "tsx"]	Array of file extensions to be treated as routes.
-// server	object		Nitro server config options
-// appRoot	string	"./src"	The path to the root of the application.
-// routeDir	string	"./routes"	The path to where the routes are located.
-// middleware	string		The path to an optional middleware file.
-// devOverlay	boolean	true	Toggle the dev overlay.
-// experimental.islands	boolean	false	Enable "islands" mode.
-// vite	ViteConfig or ({ router })=>ViteConfig		Vite config object. Can be configured for each router which has the string value "server", "client" or "server-function"`
 
 // export default defineConfig({
 //   // nitro config
