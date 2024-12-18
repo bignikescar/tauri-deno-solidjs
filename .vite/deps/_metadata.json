@@ -1,46 +1,70 @@
 {
-  "hash": "ed9924e9",
+  "hash": "993f81a8",
   "configHash": "3156c437",
-  "lockfileHash": "e3b0c442",
-  "browserHash": "063b2a04",
+  "lockfileHash": "43a1a4f4",
+  "browserHash": "fcfbc103",
   "optimized": {
     "solid-js": {
-      "src": "../../node_modules/.deno/solid-js@1.9.3/node_modules/solid-js/dist/dev.js",
+      "src": "../../node_modules/.pnpm/solid-js@1.9.3/node_modules/solid-js/dist/dev.js",
       "file": "solid-js.js",
-      "fileHash": "8b80e5a7",
+      "fileHash": "98e01714",
       "needsInterop": false
     },
     "solid-js/web": {
-      "src": "../../node_modules/.deno/solid-js@1.9.3/node_modules/solid-js/web/dist/dev.js",
+      "src": "../../node_modules/.pnpm/solid-js@1.9.3/node_modules/solid-js/web/dist/dev.js",
       "file": "solid-js_web.js",
-      "fileHash": "65b5d5ce",
+      "fileHash": "1904b44e",
       "needsInterop": false
     },
     "solid-js/store": {
-      "src": "../../node_modules/.deno/solid-js@1.9.3/node_modules/solid-js/store/dist/dev.js",
+      "src": "../../node_modules/.pnpm/solid-js@1.9.3/node_modules/solid-js/store/dist/dev.js",
       "file": "solid-js_store.js",
-      "fileHash": "160b8821",
+      "fileHash": "251abd7a",
       "needsInterop": false
     },
     "solid-js/html": {
-      "src": "../../node_modules/.deno/solid-js@1.9.3/node_modules/solid-js/html/dist/html.js",
+      "src": "../../node_modules/.pnpm/solid-js@1.9.3/node_modules/solid-js/html/dist/html.js",
       "file": "solid-js_html.js",
-      "fileHash": "235189af",
+      "fileHash": "5e184780",
       "needsInterop": false
     },
     "solid-js/h": {
-      "src": "../../node_modules/.deno/solid-js@1.9.3/node_modules/solid-js/h/dist/h.js",
+      "src": "../../node_modules/.pnpm/solid-js@1.9.3/node_modules/solid-js/h/dist/h.js",
       "file": "solid-js_h.js",
-      "fileHash": "47ee51e6",
+      "fileHash": "d3330d22",
+      "needsInterop": false
+    },
+    "@tauri-apps/plugin-shell": {
+      "src": "../../node_modules/.deno/@tauri-apps+plugin-shell@2.2.0/node_modules/@tauri-apps/plugin-shell/dist-js/index.js",
+      "file": "@tauri-apps_plugin-shell.js",
+      "fileHash": "87e844ee",
+      "needsInterop": false
+    },
+    "@tauri-apps/api": {
+      "src": "../../node_modules/.deno/@tauri-apps+api@2.1.1/node_modules/@tauri-apps/api/index.js",
+      "file": "@tauri-apps_api.js",
+      "fileHash": "4a7da29c",
+      "needsInterop": false
+    },
+    "@tauri-apps/api/core": {
+      "src": "../../node_modules/.deno/@tauri-apps+api@2.1.1/node_modules/@tauri-apps/api/core.js",
+      "file": "@tauri-apps_api_core.js",
+      "fileHash": "7eb99cf9",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-RULD45CP": {
-      "file": "chunk-RULD45CP.js"
+    "chunk-HUDXYXVT": {
+      "file": "chunk-HUDXYXVT.js"
     },
-    "chunk-MCSBZCFX": {
-      "file": "chunk-MCSBZCFX.js"
+    "chunk-5IPCZOPZ": {
+      "file": "chunk-5IPCZOPZ.js"
+    },
+    "chunk-5ORIWMRT": {
+      "file": "chunk-5ORIWMRT.js"
+    },
+    "chunk-PZ5AY32C": {
+      "file": "chunk-PZ5AY32C.js"
     }
   }
 }

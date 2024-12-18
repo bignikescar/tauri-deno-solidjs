@@ -1,12 +1,14 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@hono/hono@^4.6.14": "4.6.14",
     "npm:@deno/vite-plugin@^1.0.2": "1.0.2_vite@6.0.3",
     "npm:@tauri-apps/api@2": "2.1.1",
     "npm:@tauri-apps/cli@*": "2.1.0",
     "npm:@tauri-apps/cli@2": "2.1.0",
     "npm:@tauri-apps/plugin-shell@2": "2.2.0",
     "npm:@types/node@*": "22.5.4",
+    "npm:@types/node@^22.10.2": "22.10.2",
     "npm:esbuild-plugin-solid@0.6": "0.6.0_esbuild@0.24.0_solid-js@1.9.3__seroval@1.1.1_@babel+core@7.26.0",
     "npm:esbuild@0.24": "0.24.0",
     "npm:node-gyp@11": "11.0.0",
@@ -14,6 +16,11 @@
     "npm:vite-plugin-solid@^2.11.0": "2.11.0_solid-js@1.9.3__seroval@1.1.1_vite@6.0.3_@babel+core@7.26.0",
     "npm:vite@*": "6.0.3_@types+node@22.5.4",
     "npm:vite@^6.0.1": "6.0.3_@types+node@22.5.4"
+  },
+  "jsr": {
+    "@hono/hono@4.6.14": {
+      "integrity": "b39a5488266adf448fb1081bc3071a0d05145e72f3ab3ff83cf140e780c6c1de"
+    }
   },
   "npm": {
     "@ampproject/remapping@2.3.0": {
@@ -521,10 +528,16 @@
     "@types/estree@1.0.6": {
       "integrity": "sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw=="
     },
+    "@types/node@22.10.2": {
+      "integrity": "sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==",
+      "dependencies": [
+        "undici-types@6.20.0"
+      ]
+    },
     "@types/node@22.5.4": {
       "integrity": "sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==",
       "dependencies": [
-        "undici-types"
+        "undici-types@6.19.8"
       ]
     },
     "abbrev@2.0.0": {
@@ -1131,6 +1144,9 @@
     "undici-types@6.19.8": {
       "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
     },
+    "undici-types@6.20.0": {
+      "integrity": "sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg=="
+    },
     "unique-filename@4.0.0": {
       "integrity": "sha512-XSnEewXmQ+veP7xX2dS5Q4yZAvO40cBN2MWkJ7D/6sW4Dg6wYBNwM1Vrnz1FhH5AdeLIlUXRI9e28z1YZi71NQ==",
       "dependencies": [
@@ -1179,7 +1195,7 @@
     "vite@6.0.3_@types+node@22.5.4": {
       "integrity": "sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==",
       "dependencies": [
-        "@types/node",
+        "@types/node@22.5.4",
         "esbuild",
         "fsevents",
         "postcss",
@@ -1230,12 +1246,19 @@
       "integrity": "sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw=="
     }
   },
+  "remote": {
+    "https://deno.land/std@0.200.0/assert/assert.ts": "9a97dad6d98c238938e7540736b826440ad8c1c1e54430ca4c4e623e585607ee",
+    "https://deno.land/std@0.200.0/assert/assertion_error.ts": "4d0bde9b374dfbcbe8ac23f54f567b77024fb67dbb1906a852d67fe050d42f56",
+    "https://deno.land/std@0.200.0/flags/mod.ts": "a5ac18af6583404f21ea03771f8816669d901e0ff4374020870334d6f61d73d5"
+  },
   "workspace": {
     "dependencies": [
+      "jsr:@hono/hono@^4.6.14",
       "npm:@deno/vite-plugin@^1.0.2",
       "npm:@tauri-apps/api@2",
       "npm:@tauri-apps/cli@2",
       "npm:@tauri-apps/plugin-shell@2",
+      "npm:@types/node@^22.10.2",
       "npm:esbuild-plugin-solid@0.6",
       "npm:esbuild@0.24",
       "npm:node-gyp@11",

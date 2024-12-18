@@ -10,16 +10,45 @@
     "frontendDist": "../dist"
   },
   "app": {
+    "withGlobalTauri": true,
+    "security": {
+      "csp": {
+        "default-src": "'self' customprotocol: asset:",
+        "connect-src": "ipc: http://ipc.localhost",
+        "font-src": ["https://fonts.gstatic.com"],
+        "img-src": "'self' asset: http://asset.localhost blob: data:",
+        "style-src": "'unsafe-inline' 'self' https://fonts.googleapis.com"
+      },
+      "headers": {
+        "Cross-Origin-Opener-Policy": "same-origin",
+        "Cross-Origin-Embedder-Policy": "require-corp",
+        "Timing-Allow-Origin": [
+          "https://developer.mozilla.org",
+          "https://example.com"
+        ],
+        "X-Content-Type-Options": null,
+        "Access-Control-Expose-Headers": "Tauri-Custom-Header",
+        "Tauri-Custom-Header": {
+          "key1": "'value1' 'value2'",
+          "key2": "'value3'"
+        }
+      }
+    },
     "windows": [
       {
+        "fullscreen": false,
+        "resizable": true,
         "title": "tuari-deno",
-        "width": 800,
-        "height": 600
+        "width": 1366,
+        "height": 768,
+        "minWidth": 360,
+        "minHeight": 600,
+        "maxWidth": 480,
+        "minimizable": false,
+        "maximizable": false,
+        "additionalBrowserArgs": "--disable-web-security"
       }
-    ],
-    "security": {
-      "csp": null
-    }
+    ]
   },
   "bundle": {
     "active": true,
@@ -30,6 +59,11 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
+    ],
+    "externalBin": [
+      "binaries/denort",
+      "binaries/deno",
+      "binaries/tauri-deno-solidjs"
     ]
   }
 }

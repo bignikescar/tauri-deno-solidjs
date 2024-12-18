@@ -4,7 +4,46 @@
   "description": "Capability for the main window",
   "windows": ["main"],
   "permissions": [
-    "core:default",
-    "shell:allow-open"
+    "core:path:default",
+    "core:event:default",
+    "core:window:default",
+    "core:app:default",
+    "core:resources:default",
+    "core:menu:default",
+    "core:tray:default",
+    "core:window:allow-set-title",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        {
+          "name": "binaries/denort",
+          "sidecar": true
+        },
+        {
+          "name": "binaries/deno",
+          "sidecar": true
+        },
+        {
+          "name": "binaries/tauri-deno-solidjs",
+          "sidecar": true
+        }
+      ]
+    },
+    "shell:allow-open",
+    "http:default",
+    {
+      "identifier": "http:default",
+      "allow": [
+        { "url": "https://*.dure.one" },
+        { "url": "http://localhost" },
+        { "url": "http://localhost:1420" },
+        { "url": "http://localhost:8000" },
+        { "url": "https://localhost" },
+        { "url": "https://localhost:1420" },
+        { "url": "https://localhost:8000" }
+      ],
+      "deny": [{ "url": "https://private.tauri.app" }]
+    },
+    "cors-fetch:default"
   ]
 }

@@ -6,7 +6,8 @@
     "preview": "deno run -A --node-modules-dir npm:vite preview",
     "serve": "deno run --allow-net --allow-read --node-modules-dir jsr:@std/http@1/file-server dist/",
     "tauri": "deno run -A --node-modules-dir npm:@tauri-apps/cli",
-    "bundle": "deno run -A --node-modules-dir bundle-solidjs.ts 'src/main.tsx' 'dist/out.js'"
+    "bundle": "deno run -A --node-modules-dir bundle-solidjs.ts 'src/main.tsx' 'dist/out.js'",
+    "compile": "deno compile --allow-read --allow-write --allow-net --unstable cli.ts && rm -rf ./src-tauri/binaries/tauri-deno-solidjs-x86_64-unknown-linux-gnu && mv tauri-deno-solidjs ./src-tauri/binaries/tauri-deno-solidjs-x86_64-unknown-linux-gnu"
   },
   "compilerOptions": {
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -14,9 +15,11 @@
     "jsxImportSource": "solid-js"
   },
   "imports": {
+    "@hono/hono": "jsr:@hono/hono@^4.6.14",
     "@tauri-apps/api": "npm:@tauri-apps/api@^2",
     "@tauri-apps/plugin-shell": "npm:@tauri-apps/plugin-shell@^2",
     "@tauri-apps/cli": "npm:@tauri-apps/cli@^2",
+    "@types/node": "npm:@types/node@^22.10.2",
     "vite": "npm:vite@^6.0.1",
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.2",
     "vite-plugin-solid": "npm:vite-plugin-solid@^2.11.0",
